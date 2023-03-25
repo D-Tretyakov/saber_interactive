@@ -19,7 +19,7 @@ TEST(PrintBinaryTests, NegativeTen)
     EXPECT_EQ(actual, expected);
 }
 
-TEST(PrintBinaryTests, PositiveObe)
+TEST(PrintBinaryTests, PositiveOne)
 {
     testing::internal::CaptureStdout();
     PrintBinary(1);
