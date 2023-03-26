@@ -32,3 +32,34 @@ TEST(RemoveDupsTests, ManySpaces)
     const char expected[] = " ";
     ASSERT_STREQ(data, expected);
 }
+
+TEST(RemoveDupsTests, VariousConsecutiveLen)
+{
+    char data[] = " a aa  aaa    aaaa      aaaaa     ";
+    RemoveDups(data);
+    const char expected[] = " a a a a a ";
+    ASSERT_STREQ(data, expected);
+}
+TEST(RemoveDupsTests, OneRepeatedLetter)
+{
+    char data[] = "aaaaaaaaaaaaaaaaaaaa";
+    RemoveDups(data);
+    const char expected[] = "a";
+    ASSERT_STREQ(data, expected);
+}
+
+TEST(RemoveDupsTests, HelloWorld)
+{
+    char data[] = "Hello World!!!!!111!";
+    RemoveDups(data);
+    const char expected[] = "Helo World!1!";
+    ASSERT_STREQ(data, expected);
+}
+
+TEST(RemoveDupsTests, NoDups)
+{
+    char data[] = "I like cats";
+    RemoveDups(data);
+    const char expected[] = "I like cats";
+    ASSERT_STREQ(data, expected);
+}
