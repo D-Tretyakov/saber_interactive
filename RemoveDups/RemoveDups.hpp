@@ -1,0 +1,1 @@
+void RemoveDups(char* str);

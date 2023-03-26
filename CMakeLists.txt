@@ -21,11 +21,17 @@ set(PrintBinarySources
   "PrintBinary/PrintBinaryTests.cpp"
 )
 
+set(RemoveDupsSources 
+  "RemoveDups/RemoveDups.cpp" 
+  "RemoveDups/RemoveDupsTests.cpp"
+)
+
 enable_testing()
 
 add_executable(
   tests
   ${PrintBinarySources}
+  ${RemoveDupsSources}
 )
 target_link_libraries(
   tests
