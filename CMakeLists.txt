@@ -40,3 +40,9 @@ target_link_libraries(
 
 include(GoogleTest)
 gtest_discover_tests(tests)
+
+add_custom_command(
+  TARGET tests
+  POST_BUILD
+  COMMAND tests
+)
