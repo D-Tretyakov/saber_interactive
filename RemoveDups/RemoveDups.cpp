@@ -1,5 +1,8 @@
 void RemoveDups(char* str)
 {
+    if (!str)
+        return;
+
     char* new_str = str;
 
     while (*(str++) != '\0')
