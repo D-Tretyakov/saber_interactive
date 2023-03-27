@@ -26,12 +26,18 @@ set(RemoveDupsSources
   "RemoveDups/RemoveDupsTests.cpp"
 )
 
+set(LinkedListSources 
+  "LinkedList/LinkedList.cpp" 
+  "LinkedList/LinkedListTests.cpp"
+)
+
 enable_testing()
 
 add_executable(
   tests
   ${PrintBinarySources}
   ${RemoveDupsSources}
+  ${LinkedListSources}
 )
 target_link_libraries(
   tests
